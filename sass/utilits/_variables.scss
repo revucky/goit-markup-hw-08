@@ -1,0 +1,31 @@
+/* колір заголовку "background: #212121;
+" */
+/* колір основного тексту, та номеру тел. і пошти в хедер "background: #757575;
+" */
+/* колір фокусу background: #2196F3;
+ */
+/* білий background: #FFFFFF; */
+
+/* коліру в футері тел, пошта rgba(255, 255, 255, 0.6) */
+
+:root {
+  --text-title: #212121;
+  --text-accent-hf: #2196f3;
+  --primery-text-color: #757575;
+  --text-white: #fff;
+  --color-bcg: #2f303a;
+  --mail-tel-footer: rgba(255, 255, 255, 0.6);
+  --social-footer: rgba(255, 255, 255, 0.1);
+  --button-filter: #f5f4fa;
+  --bg-icon-credo: #f5f4fa;
+  --button-filter-text: #212121;
+  --header-border: #ececec;
+  --bgc-hero: rgba(47, 48, 58, 0.4);
+  --team-social-color: #afb1b8;
+  --card-set-gap: 30px;
+  --card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --portfolio-card-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  --portfolio-border-color: #eeeeee;
+}
