@@ -2,8 +2,15 @@
   display: flex;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 50px;
-  justify-content: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 .conteiner.btn {
   padding-bottom: 0;
@@ -28,6 +35,9 @@
     background-color: var(--text-accent-hf);
     color: var(--text-white);
     box-shadow: var(--portfolio-card-shadow);
+  }
+  @media screen and (min-width: 480px) {
+    margin-bottom: 15px;
   }
 }
 .button-current {
@@ -62,16 +72,14 @@
 .section-works {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -30px;
+  // margin-right: -30px;
   margin-bottom: -30px;
-  /* outline: 2px solid pink; */
+  // outline: 2px solid pink;
 }
 
 .works-item {
-  width: 370px;
-  margin-right: 30px;
+  width: 450px;
   margin-bottom: 30px;
-  flex-basis: calc(100% / 3 - 30px);
   background: var(--text-white);
   border: 1px solid var(--portfolio-border-color);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -80,6 +88,22 @@
   }
   &:hover .works-text {
     transform: translateY(0%);
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 354px;
+    // flex-basis: calc(100% / 2 - 30px);
+    margin-right: 30px;
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    width: 370px;
+    margin-right: 30px;
+    // flex-basis: calc(100% / 3 - 30px);
+    &:nth-child(3n + 3) {
+      margin-right: 0;
+    }
   }
 }
 
