@@ -34,6 +34,12 @@
   &:focus + .form-icon {
     fill: var(--text-accent-hf);
   }
+  @media screen and (min-width: 480px) {
+    width: 370px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 448px;
+  }
 }
 
 .form-icon {
@@ -46,7 +52,7 @@
   position: relative;
 }
 .textarea {
-  width: 448px;
+  width: 370px;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   padding: 12px 16px;
@@ -63,11 +69,22 @@
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
   }
+  @media screen and (min-width: 1200px) {
+    width: 448px;
+  }
 }
 .check-link {
   color: var(--text-accent-hf);
   text-decoration: underline;
   padding-left: 5px;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.03em;
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+  }
 }
 .check-box {
   margin-top: 20px;
@@ -76,7 +93,16 @@
   display: flex;
   margin-bottom: 30px;
   align-items: center;
-  justify-content: center;
+
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.03em;
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+    justify-content: center;
+  }
 }
 .check-item {
   width: 16px;
@@ -87,6 +113,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }

@@ -18,7 +18,7 @@
   </head>
 
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="conteiner header-conteiner">
         <nav class="nav">
           <a class="logo" href="./index.html">
@@ -29,12 +29,17 @@
             <li>
               <a href="./portfolio.html" class="site-nav__active">Портфолио</a>
             </li>
-            <li><a href="" class="site-nav__link">Контакты</a></li>
+            <li><a href="#contacts" class="site-nav__link">Контакты</a></li>
           </ul>
         </nav>
+        <button class="mob-btn-open js-open-menu" aria-expanded="false" type="button">
+          <svg width="40" height="40">
+            <use href="./images/sprite.svg#icon-menu_mob"></use>
+          </svg>
+        </button>
         <ul class="contact">
           <li class="contact__item">
-            <a class="contact__link" href="mailto:"
+            <a class="contact__link mail" href="mailto:"
               ><svg class="contact__icon" width="16" height="12">
                 <use href="./images/sprite.svg#icon-mail"></use>
               </svg>
@@ -42,7 +47,7 @@
             >
           </li>
           <li class="contact__item">
-            <a class="contact__link" href="tel:"
+            <a class="contact__link tel" href="tel:"
               ><svg class="contact__icon" width="10" height="16">
                 <use href="./images/sprite.svg#icon-tel"></use>
               </svg>
@@ -51,8 +56,45 @@
           </li>
         </ul>
       </div>
-    </header> -->
-
+      <!-- <div class="backdrop"> -->
+        <div class="mob-menu js-menu-container">
+          <button type="button"  class="mob-btn-close js-close-menu">
+            <svg width="40" height="40">
+              <use href="./images/sprite.svg#icon-close_mob"></use>
+            </svg>
+          </button>
+          <ul class="mob-list">
+            <li class="mob-item">
+              <a href="./index.html" class="mob__link">Студия</a>
+            </li>
+            <li class="mob-item">
+              <a href="./portfolio.html" class="mob-link__active">Портфолио</a>
+            </li>
+            <li class="mob-item">
+              <a href="#contacts" class="mob__link">Контакты</a>
+            </li>
+          </ul>
+          <ul class="mob-contact-list">
+            <li class="mob-contact-tel">
+              <a class="mob-link-tel" href="tel:+380961111111"
+                >+38 096 111 11 11</a
+              >
+            </li>
+            <li class="mob-contact-mail">
+              <a class="mob-link-mail" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mob-soc-list">
+            <li class="mob-soc-item"><a class="mob-soc-link mob-soc-link--divider" href="./index.html">Instagram</a></li>
+            <li class="mob-soc-item"><a class="mob-soc-link mob-soc-link--divider" href="./index.html">Twitter</a></li>
+            <li class="mob-soc-item"><a class="mob-soc-link mob-soc-link--divider" href="./index.html">Facebook</a></li>
+            <li class="mob-soc-item"><a class="mob-soc-link" href="./index.html">Linkedin</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
     <main>
       <!-- Наші роботи -->
       <section class="section">
@@ -76,7 +118,27 @@
           <ul class="section-works">
             <li class="works-item">
               <div class="works-wrap">
-                <img src="./images/imgP1.jpg" alt="tehnokr" width="370" />
+                <picture
+                  ><source
+                    srcset="
+                      ./images/desctop/port_1.jpg    1x,
+                      ./images/desctop/port_1@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)" />
+                  <source
+                    srcset="
+                      ./images/tablet/port_1.jpg    1x,
+                      ./images/tablet/port_1@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)" />
+                  <source
+                    srcset="
+                      ./images/mob/port_1.jpg    1x,
+                      ./images/mob/port_1@2x.jpg 2x
+                    "
+                    media="(min-width: 480px)" />
+                  <img src="./images/mob/port_1.jpg" alt="tehnokr"
+                /></picture>
                 <p class="works-text">
                   Технокряк это современная площадка распространения
                   коронавируса. Компании используют эту платформу для цифрового
@@ -88,7 +150,27 @@
             </li>
             <li class="works-item">
               <div class="works-wrap">
-                <img src="./images/imgP2.jpg" alt="NOvsGS" width="370" />
+                <picture
+                  ><source
+                    srcset="
+                      ./images/desctop/port_2.jpg    1x,
+                      ./images/desctop/port_2@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)" />
+                  <source
+                    srcset="
+                      ./images/tablet/port_2.jpg    1x,
+                      ./images/tablet/port_2@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)" />
+                  <source
+                    srcset="
+                      ./images/mob/port_2.jpg    1x,
+                      ./images/mob/port_2@2x.jpg 2x
+                    "
+                    media="(min-width: 480px)" />
+                  <img src="./images/mob/port_2.jpg" alt="NOvsGS"
+                /></picture>
                 <p class="works-text">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
                   soluta qui est dolore dicta! Officiis maiores ipsa minus.
@@ -101,37 +183,177 @@
               <p class="title-text-works">Дизайн</p>
             </li>
             <li class="works-item">
-              <img src="./images/imgP3.jpg" alt="Seafood" width="370" />
+              <picture
+                ><source
+                  srcset="
+                    ./images/desctop/port_3.jpg    1x,
+                    ./images/desctop/port_3@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)" />
+                <source
+                  srcset="
+                    ./images/tablet/port_3.jpg    1x,
+                    ./images/tablet/port_3@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)" />
+                <source
+                  srcset="
+                    ./images/mob/port_3.jpg    1x,
+                    ./images/mob/port_3@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)" />
+                <img src="./images/mob/port_3.jpg" alt="Seafood"
+              /></picture>
               <h3 class="section-title-works">Ресторан Seafood</h3>
               <p class="title-text-works">Приложение</p>
             </li>
             <li class="works-item">
-              <img src="./images/imgP4.jpg" alt="Prime" width="370" />
+              <picture
+                ><source
+                  srcset="
+                    ./images/desctop/port_4.jpg    1x,
+                    ./images/desctop/port_4@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)" />
+                <source
+                  srcset="
+                    ./images/tablet/port_4.jpg    1x,
+                    ./images/tablet/port_4@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)" />
+                <source
+                  srcset="
+                    ./images/mob/port_4.jpg    1x,
+                    ./images/mob/port_4@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)" />
+                <img src="./images/mob/port_4.jpg" alt="Prime"
+              /></picture>
               <h3 class="section-title-works">Проект Prime</h3>
               <p class="title-text-works">Маркетинг</p>
             </li>
             <li class="works-item">
-              <img src="./images/imgP5.jpg" alt="Boxes" width="370" />
+              <picture
+                ><source
+                  srcset="
+                    ./images/desctop/port_5.jpg    1x,
+                    ./images/desctop/port_5@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)" />
+                <source
+                  srcset="
+                    ./images/tablet/port_5.jpg    1x,
+                    ./images/tablet/port_5@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)" />
+                <source
+                  srcset="
+                    ./images/mob/port_5.jpg    1x,
+                    ./images/mob/port_5@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)" />
+                <img src="./images/mob/port_5.jpg" alt="Boxes"
+              /></picture>
               <h3 class="section-title-works">Проект Boxes</h3>
               <p class="title-text-works">Приложение</p>
             </li>
             <li class="works-item">
-              <img src="./images/imgP6.jpg" alt="Inspiration" width="370" />
+              <picture
+                ><source
+                  srcset="
+                    ./images/desctop/port_6.jpg    1x,
+                    ./images/desctop/port_6@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)" />
+                <source
+                  srcset="
+                    ./images/tablet/port_6.jpg    1x,
+                    ./images/tablet/port_6@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)" />
+                <source
+                  srcset="
+                    ./images/mob/port_6.jpg    1x,
+                    ./images/mob/port_6@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)" />
+                <img src="./images/mob/port_6.jpg" alt="Inspiration"
+              /></picture>
               <h3 class="section-title-works">Inspiration has no Borders</h3>
               <p class="title-text-works">Веб-сайт</p>
             </li>
             <li class="works-item">
-              <img src="./images/imgP7.jpg" alt="LE" width="370" />
+              <picture
+                ><source
+                  srcset="
+                    ./images/desctop/port_7.jpg    1x,
+                    ./images/desctop/port_7@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)" />
+                <source
+                  srcset="
+                    ./images/tablet/port_7.jpg    1x,
+                    ./images/tablet/port_7@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)" />
+                <source
+                  srcset="
+                    ./images/mob/port_7.jpg    1x,
+                    ./images/mob/port_7@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)" />
+                <img src="./images/mob/port_7.jpg" alt="LE"
+              /></picture>
               <h3 class="section-title-works">Издание Limited Edition</h3>
               <p class="title-text-works">Дизайн</p>
             </li>
             <li class="works-item">
-              <img src="./images/imgP8.jpg" alt="LAB" width="370" />
+              <picture
+                ><source
+                  srcset="
+                    ./images/desctop/port_8.jpg    1x,
+                    ./images/desctop/port_8@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)" />
+                <source
+                  srcset="
+                    ./images/tablet/port_8.jpg    1x,
+                    ./images/tablet/port_8@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)" />
+                <source
+                  srcset="
+                    ./images/mob/port_8.jpg    1x,
+                    ./images/mob/port_8@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)" />
+                <img src="./images/mob/port_8.jpg" alt="LAB"
+              /></picture>
               <h3 class="section-title-works">Проект LAB</h3>
               <p class="title-text-works">Маркетинг</p>
             </li>
             <li class="works-item">
-              <img src="./images/imgP9.jpg" alt="LAB" width="370" />
+              <picture
+                ><source
+                  srcset="
+                    ./images/desctop/port_9.jpg    1x,
+                    ./images/desctop/port_9@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)" />
+                <source
+                  srcset="
+                    ./images/tablet/port_9.jpg    1x,
+                    ./images/tablet/port_9@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)" />
+                <source
+                  srcset="
+                    ./images/mob/port_9.jpg    1x,
+                    ./images/mob/port_9@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)" />
+                <img src="./images/mob/port_9.jpg" alt="LAB"
+              /></picture>
               <h3 class="section-title-works">Growing Business</h3>
               <p class="title-text-works">Приложение</p>
             </li>
@@ -208,5 +430,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
